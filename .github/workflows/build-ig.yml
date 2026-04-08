@@ -23,6 +23,8 @@ jobs:
       NODE_VERSION: "20"
       RUBY_VERSION: "3.2"
       IG_PUBLISHER_VERSION: "latest"
+      # Memory settings aligned with build.fhir.org (adjusted for GitHub Actions)
+      JAVA_OPTS: "-Xms4096m -Xmx6144m -Dfile.encoding=UTF-8"
 
     steps:
       - name: Checkout repo
@@ -86,7 +88,7 @@ jobs:
       - name: Build IG
         run: |
           set -euo pipefail
-          java -jar input-cache/publisher.jar publisher -ig . -tx http://tx.fhir.org
+          java $JAVA_OPTS -jar input-cache/publisher.jar publisher -ig . -tx http://tx.fhir.org
           test -d output || (echo "IG Publisher did not create output/" && exit 1)
 
       - name: Fail if output is empty
