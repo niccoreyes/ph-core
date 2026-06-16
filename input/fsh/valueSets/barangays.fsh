@@ -37,6 +37,7 @@ Description: "The Barangay codes valueset includes all barangay values from the 
 * $PSGC#1204701001 "Bao"
 * $PSGC#1206302002 "Benitez "
 * $PSGC#1380100001 "Barangay 1"
+* $PSGC#1380608000 "Ermita"
 * $PSGC#1400101001 "Agtangao"
 * $PSGC#1401101001 "Abiang"
 * $PSGC#1600201001 "Abilan"
