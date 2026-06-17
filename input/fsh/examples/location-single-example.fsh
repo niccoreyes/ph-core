@@ -15,7 +15,7 @@ Description: "Philippine General Hospital - A government tertiary hospital locat
 * address.line = "Taft Avenue"
 * address.postalCode = "1000"
 * address.country = "PH"
-* address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region"
+* address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region (NCR)"
 * address.extension[cityMunicipality].valueCoding = $PSGC#1380600000 "City of Manila"
 * managingOrganization = Reference(Organization/organization-single-example)
 * type = $v3-roleCode#HOSP "Hospital"
