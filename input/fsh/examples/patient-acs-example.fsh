@@ -47,7 +47,7 @@ Description: "Juan Dela Cruz, 45-year-old Filipino male, residing in City of Las
 * address.country = "PH"
 
 * address.extension[cityMunicipality].valueCoding = $PSGC#1380200000 "City of Las Piñas"
-* address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region"
+* address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region (NCR)"
 
 * generalPractitioner = Reference(Practitioner/practitioner-ed-example)
 * managingOrganization = Reference(Organization/organization-pgh-example)

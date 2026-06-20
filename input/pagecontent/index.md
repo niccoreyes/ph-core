@@ -1,10 +1,3 @@
-<style>
-img, svg {
-  max-width: 100%;
-  height: auto !important;
-  box-sizing: border-box;
-}
-</style>
 
 # Draft Philippine Core FHIR Implementation Guide (PH Core IG)
 

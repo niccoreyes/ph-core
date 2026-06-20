@@ -27,7 +27,7 @@ Description: "Dr. Maria Clara Santos, MD — Emergency Medicine Attending Physic
 
 * address.extension[barangay].valueCoding = $PSGC#1339000003 "Ermita"
 * address.extension[cityMunicipality].valueCoding = $PSGC#1380600000 "City of Manila"
-* address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region"
+* address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region (NCR)"
 
 * gender = #female
 * birthDate = "1985-05-15"

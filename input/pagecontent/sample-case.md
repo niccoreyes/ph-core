@@ -7,73 +7,6 @@ This tutorial walks you through a complete emergency department case using **FHI
 **Test Server:** `https://cdr.fhirlab.net/fhir`  
 **Server Capability:** Supports FHIR R4, all CRUD operations, transaction Bundles
 
-<style>
-  /* Table styling for sample-case page */
-  .markdown-body table,
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 1em 0;
-    font-size: 0.95em;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-
-  .markdown-body table thead,
-  table thead {
-    display: table-header-group;
-  }
-
-  .markdown-body table th,
-  table th {
-    background-color: #2c5282;
-    color: #ffffff;
-    font-weight: 600;
-    padding: 12px 16px;
-    text-align: left;
-    border: 1px solid #1a365d;
-  }
-
-  .markdown-body table td,
-  table td {
-    padding: 10px 16px;
-    border: 1px solid #e2e8f0;
-    vertical-align: top;
-  }
-
-  .markdown-body table tbody tr:nth-child(odd),
-  table tbody tr:nth-child(odd) {
-    background-color: #ffffff;
-  }
-
-  .markdown-body table tbody tr:nth-child(even),
-  table tbody tr:nth-child(even) {
-    background-color: #f7fafc;
-  }
-
-  .markdown-body table tbody tr:hover,
-  table tbody tr:hover {
-    background-color: #ebf8ff;
-    transition: background-color 0.2s ease;
-  }
-
-  /* Style for code within tables */
-  .markdown-body table td code,
-  table td code {
-    background-color: #edf2f7;
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-size: 0.9em;
-    color: #2d3748;
-  }
-
-  /* Style for the first column (often headers/labels) */
-  .markdown-body table td:first-child,
-  table td:first-child {
-    font-weight: 500;
-    color: #2d3748;
-  }
-</style>
-
 ---
 
 ## Table of Contents
@@ -109,12 +42,13 @@ This tutorial walks you through a complete emergency department case using **FHI
 | **Reference** | A link pointing to another resource | `Patient/patient-acs-example` |
 | **Profile** | Extra rules on top of base FHIR | PH Core adds Philippine-specific requirements |
 | **REST API** | Standard HTTP methods (GET, POST, PUT, DELETE) | `GET https://server/fhir/Patient/123` |
+{:.ph-table}
 
 ### Anatomy of a FHIR Resource
 
 Every FHIR resource is a JSON object with these key parts:
 
-```json
+```jsonc
 {
   "resourceType": "Patient",          // ⭐ What kind of resource is this?
   "id": "patient-acs-example",        // Unique identifier (you choose or server assigns)
@@ -150,6 +84,7 @@ https://cdr.fhirlab.net/fhir/{resourceType}/{id}
 | **PUT** | Replace data | Update/replace entire resource | `PUT /Patient/123` |
 | **PATCH** | Modify data | Partial update | `PATCH /Patient/123` |
 | **DELETE** | Remove data | Delete a resource | `DELETE /Patient/123` |
+{:.ph-table}
 
 ### Required Headers
 
@@ -166,6 +101,8 @@ Accept: application/fhir+json
 
 The following table provides a framework recommendation for choosing the right HTTP method based on the FHIR interaction and resource type. This guidance helps prevent common mistakes like duplicate records or overwriting clinical history.
 
+<div class="ph-scroll" markdown="1">
+
 | REST Method | FHIR Interaction | Resource Recommendation & Best Practice | Key Resource Examples |
 | :--- | :--- | :--- | :--- |
 | **POST** | **Create** | Used when the **server assigns the logical ID**. Recommended for clinical events where each submission is a new measurement. Also used to submit **Transactions** to the server root. | `Observation` (new vitals), `Bundle` (Transactions), `Patient` (new record) |
@@ -173,6 +110,9 @@ The following table provides a framework recommendation for choosing the right H
 | **GET** | **Read / Search** | Used to retrieve a specific resource by ID or search for multiple resources matching criteria. A successful request returns a `200 OK`. | Any resource (e.g., `Patient`, `Condition`, `Encounter`) |
 | **DELETE** | **Delete** | Used to remove a resource from the server. Successful deletion returns a `204 No Content`. Previous versions may remain accessible via history. | Any Resource |
 | **PATCH** | **Partial Update** | Used to apply **partial modifications** to a resource without sending the entire body. | `Patient` |
+{:.ph-table}
+
+</div>
 
 ### Key Discussion and Best Practices
 
@@ -211,6 +151,7 @@ When processing multiple resources simultaneously (like a patient, their device,
 | **DELETE** | ✅ Yes | Deleting the same resource twice results in the same deleted state. |
 | **POST** | ❌ No | Posting the same resource multiple times will create **duplicate records** with different IDs. |
 | **PATCH** | ❌ No | Patching the same resource multiple times may produce different results depending on the starting state. |
+{:.ph-table}
 
 > **Important:** Because POST is not idempotent, you must design your client carefully. If a POST request times out, you cannot safely retry it without risk of duplicates. For registry resources, prefer Conditional PUT to avoid this problem.
 
@@ -230,7 +171,7 @@ FHIR uses the **JSON Patch** format (`Content-Type: application/json-patch+json`
 >
 > **Request Body:**
 >
-> ```json
+> ```jsonc
 > [
 >   {
 >     "op": "replace",
@@ -357,6 +298,7 @@ Accept: application/fhir+json
 | Observation | `code` | `?code=85354-9` |
 | Condition | `subject` | `?subject=Patient/123` |
 | Condition | `code` | `?code=401303003` |
+{:.ph-table}
 
 ---
 
@@ -380,7 +322,7 @@ Accept: application/fhir+json
 
 #### Request Body
 
-```json
+```jsonc
 {
   "resourceType": "Patient",
   "meta": {
@@ -434,7 +376,7 @@ Accept: application/fhir+json
           "valueCoding": {
             "system": "https://psa.gov.ph/classification/psgc",
             "code": "1300000000",
-            "display": "National Capital Region"
+            "display": "National Capital Region (NCR)"
           }
         }
       ]
@@ -539,6 +481,7 @@ Accept: application/fhir+json
 | `birthDate` | ⭐ Yes | ISO date (YYYY-MM-DD) | `"1981-03-15"` |
 | `address` | No | Home address | With PSGC extensions for Philippines |
 | `extension` | 🇵🇭 PH Core | PH-specific data | nationality, religion, education, occupation |
+{:.ph-table}
 
 #### Expected Response
 
@@ -576,7 +519,7 @@ Accept: application/fhir+json
 
 #### Request Body
 
-```json
+```jsonc
 {
   "resourceType": "Encounter",
   "meta": {
@@ -671,6 +614,7 @@ Accept: application/fhir+json
 | `serviceProvider` | No | Which organization? | Reference to Organization |
 | `participant` | No | Who was involved? | Practitioner references |
 | `hospitalization` | No | Admission details | Where did the patient come from? |
+{:.ph-table}
 
 > **Important:** The `subject.reference` must use the **server-assigned ID** from the Patient POST response. If the server assigned `123`, use `Patient/123`.
 
@@ -690,7 +634,7 @@ Accept: application/fhir+json
 
 #### Request Body
 
-```json
+```jsonc
 {
   "resourceType": "Condition",
   "meta": {
@@ -767,6 +711,7 @@ Accept: application/fhir+json
 | `encounter` | No | Which visit? | `Encounter/456` |
 | `onsetDateTime` | No | When did it start? | `"2026-06-12T08:30:00+08:00"` |
 | `recordedDate` | No | When was it documented? | `"2026-06-12T08:45:00+08:00"` |
+{:.ph-table}
 
 ---
 
@@ -786,7 +731,7 @@ Accept: application/fhir+json
 
 #### Request Body
 
-```json
+```jsonc
 {
   "resourceType": "Observation",
   "meta": {
@@ -906,6 +851,7 @@ Accept: application/fhir+json
 | `component` | No | For complex measurements | Systolic + Diastolic |
 | `valueQuantity` | No | The numeric result | `value: 160`, `unit: "mmHg"` |
 | `interpretation` | No | High, Low, Normal | `"H"` = High |
+{:.ph-table}
 
 #### Why `component`?
 
@@ -941,7 +887,7 @@ Accept: application/fhir+json
 
 Change the `address` field:
 
-```json
+```jsonc
 {
   "resourceType": "Patient",
   "id": "123",                          // ⭐ Must include the ID
@@ -977,7 +923,7 @@ Change the `address` field:
           "valueCoding": {
             "system": "https://psa.gov.ph/classification/psgc",
             "code": "1300000000",
-            "display": "National Capital Region"
+            "display": "National Capital Region (NCR)"
           }
         }
       ]
@@ -1055,7 +1001,7 @@ Accept: application/fhir+json
 
 #### Request Body (JSON Patch)
 
-```json
+```jsonc
 [
   {
     "op": "replace",
@@ -1072,6 +1018,7 @@ Accept: application/fhir+json
 | `add` | Adds a new field | `{"op": "add", "path": "/telecom/1", "value": {...}}` |
 | `replace` | Changes an existing field | `{"op": "replace", "path": "/gender", "value": "male"}` |
 | `remove` | Deletes a field | `{"op": "remove", "path": "/telecom/1"}` |
+{:.ph-table}
 
 #### Concrete JSON Patch Example
 
@@ -1085,7 +1032,7 @@ Accept: application/fhir+json
 
 **Request Body:**
 
-```json
+```jsonc
 [
   {
     "op": "replace",
@@ -1194,7 +1141,7 @@ Accept: application/fhir+json
 
 ### Request Body
 
-```json
+```jsonc
 {
   "resourceType": "Bundle",
   "id": "bundle-acs-case-example",
@@ -1255,7 +1202,7 @@ Accept: application/fhir+json
                 "valueCoding": {
                   "system": "https://psa.gov.ph/classification/psgc",
                   "code": "1300000000",
-                  "display": "National Capital Region"
+                  "display": "National Capital Region (NCR)"
                 }
               }
             ]
@@ -1539,6 +1486,7 @@ Accept: application/fhir+json
 | `request.method` | HTTP method | `POST` for each entry |
 | `request.url` | Resource type | `Patient`, `Encounter`, `Condition`, `Observation` |
 | References | Cross-linking | `Condition.subject` points to `urn:uuid:patient-acs-example` |
+{:.ph-table}
 
 ### Expected Response
 
@@ -1790,6 +1738,7 @@ curl -X GET \
 | **PATCH** | `/Patient/123` | JSON Patch | Update specific fields |
 | **DELETE** | `/Patient/123` | None | Remove a resource |
 | **POST** | `/` | Bundle | Create multiple resources atomically |
+{:.ph-table}
 
 ### Framework Quick Reference
 
@@ -1801,6 +1750,7 @@ curl -X GET \
 | Updating only one field | **PATCH** with JSON Patch |
 | Reading or searching | **GET** |
 | Removing data | **DELETE** |
+{:.ph-table}
 
 ### Critical Rules
 
@@ -1823,6 +1773,7 @@ curl -X GET \
 | Nationality | `extension` | `http://hl7.org/fhir/StructureDefinition/patient-nationality` |
 | Religion | `extension` | `http://hl7.org/fhir/StructureDefinition/patient-religion` |
 | Occupation | `extension` | `https://fhir.doh.gov.ph/phcore/StructureDefinition/occupation` |
+{:.ph-table}
 
 ### Next Steps
 

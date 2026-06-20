@@ -34,7 +34,7 @@ Description: "Philippine General Hospital (PGH) — A government tertiary hospit
 * address.postalCode = "1000"
 * address.country = "PH"
 
-* address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region"
+* address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region (NCR)"
 * address.extension[cityMunicipality].valueCoding = $PSGC#1380600000 "City of Manila"
 * address.extension[barangay].valueCoding = $PSGC#1339000003 "Ermita"
 
@@ -46,6 +46,6 @@ Description: "Philippine General Hospital (PGH) — A government tertiary hospit
 * contact.address.city = "Manila"
 * contact.address.postalCode = "1000"
 * contact.address.country = "PH"
-* contact.address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region"
+* contact.address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region (NCR)"
 * contact.address.extension[cityMunicipality].valueCoding = $PSGC#1380600000 "City of Manila"
 * contact.address.extension[barangay].valueCoding = $PSGC#1339000003 "Ermita"

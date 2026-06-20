@@ -10,6 +10,7 @@
 | PPN | Passport Number | Patient.identifier |
 | EN | PEN - PhilHealth Employer Number | Organization.identifier |
 | AN | PAN - Accreditation Number | Organization.identifier |
+{:.ph-table}
 
 ---
 
@@ -21,6 +22,7 @@
 | SB | SSS / GSIS |
 | DL | Driver's License |
 | PPN | Passport Number |
+{:.ph-table}
 
 ## Organization ID's:
 
@@ -28,6 +30,7 @@
 |:---------|:------------|
 | EN | PEN - PhilHealth Employer's Number |
 | AN | PAN - Accreditation Number |
+{:.ph-table}
 
 
 ```
