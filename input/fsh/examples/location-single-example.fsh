@@ -4,7 +4,7 @@ Usage: #example
 Title: "Example PH Core Location"
 Description: "Philippine General Hospital - A government tertiary hospital located in Manila, Philippines."
 * text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Philippine General Hospital (PGH) is an active tertiary government hospital located in Ermita, City of Manila, National Capital Region, Philippines.</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Philippine General Hospital (PGH) is an active tertiary government hospital located in Ermita, City of Manila, National Capital Region (NCR), Philippines.</div>"
 * status = #active
 * name = "Philippine General Hospital"
 * type.coding = $v3-roleCode#HOSP "Hospital"
