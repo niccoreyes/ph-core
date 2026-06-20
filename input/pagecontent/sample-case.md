@@ -101,6 +101,8 @@ Accept: application/fhir+json
 
 The following table provides a framework recommendation for choosing the right HTTP method based on the FHIR interaction and resource type. This guidance helps prevent common mistakes like duplicate records or overwriting clinical history.
 
+<div class="ph-scroll" markdown="1">
+
 | REST Method | FHIR Interaction | Resource Recommendation & Best Practice | Key Resource Examples |
 | :--- | :--- | :--- | :--- |
 | **POST** | **Create** | Used when the **server assigns the logical ID**. Recommended for clinical events where each submission is a new measurement. Also used to submit **Transactions** to the server root. | `Observation` (new vitals), `Bundle` (Transactions), `Patient` (new record) |
@@ -109,6 +111,8 @@ The following table provides a framework recommendation for choosing the right H
 | **DELETE** | **Delete** | Used to remove a resource from the server. Successful deletion returns a `204 No Content`. Previous versions may remain accessible via history. | Any Resource |
 | **PATCH** | **Partial Update** | Used to apply **partial modifications** to a resource without sending the entire body. | `Patient` |
 {:.ph-table}
+
+</div>
 
 ### Key Discussion and Best Practices
 
