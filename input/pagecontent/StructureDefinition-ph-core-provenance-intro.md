@@ -28,6 +28,7 @@ The PH Core Provenance Profile inherits from the FHIR Provenance resource; refer
 | `agent.who` | PHCorePractitioner, PHCorePractitionerRole, PHCoreOrganization, PHCorePatient, PHCoreRelatedPerson | Device |
 | `agent.onBehalfOf` | PHCoreOrganization | - |
 | `location` | PHCoreLocation | - |
+{:.ph-table}
 
 ## Profile Specific Implementation Guidance
 
@@ -39,6 +40,7 @@ The `agent` element is sliced to distinguish between authors and transmitters:
 |-------|------|---------|
 | `ProvenanceAuthor` | author | Entity that created the data |
 | `ProvenanceTransmitter` | transmitter | Entity that transmitted the data |
+{:.ph-table}
 
 ### Constraint: provenance-1
 
@@ -60,6 +62,7 @@ This Provenance profile can be used with the following resource types:
 | [PHCorePatient](StructureDefinition-ph-core-patient.html) |
 | [PHCoreProcedure](StructureDefinition-ph-core-procedure.html) |
 | [PHCoreRelatedPerson](StructureDefinition-ph-core-relatedperson.html) |
+{:.ph-table}
 
 ### Base FHIR Resources
 

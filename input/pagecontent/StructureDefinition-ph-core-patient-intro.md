@@ -36,6 +36,7 @@ When only partial age information is known, set `birthDate` according to the fol
 | Only year known | `YYYY` | Age = 2 years old → `2024` |
 | Month and year known | `YYYY-MM` | Age = 6 months old → `2025-09` |
 | Full date known | `YYYY-MM-DD` | Age = 10 days old → `2026-03-09` |
+{:.ph-table}
 
 #### Back-Calculation for Display
 
@@ -61,4 +62,5 @@ When deriving `birthDate` from age, systems should assume the earliest possible 
 | 2-year-old child | "2 years old" | `2024` | Year only; display as "2024 (approximate)" |
 | 6-month-old infant | "6 months old" | `2025-09` | Month and year; display as "September 2025 (approximate)" |
 | 10-day-old newborn | "10 days old" | `2026-03-09` | Full date known |
+{:.ph-table}
 
