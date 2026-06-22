@@ -35,3 +35,5 @@ Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-Particip
 Alias: $admit-source = http://terminology.hl7.org/CodeSystem/admit-source
 Alias: $discharge-disposition = http://terminology.hl7.org/CodeSystem/discharge-disposition
 Alias: $diagnosis-role = http://terminology.hl7.org/CodeSystem/diagnosis-role
+Alias: $cs-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
+Alias: $restful-security-service = http://terminology.hl7.org/CodeSystem/restful-security-service

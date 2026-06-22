@@ -5,7 +5,7 @@
 This tutorial walks you through a complete emergency department case using **FHIR REST API** calls. You will learn how to create, read, update, and delete real healthcare data using standard HTTP methods against a FHIR server.
 
 **Test Server:** `https://cdr.fhirlab.net/fhir`  
-**Server Capability:** Supports FHIR R4, all CRUD operations, transaction Bundles
+**Server Capability:** Supports FHIR R4, all CRUD operations, transaction Bundles (see the [PH Core CapabilityStatement](CapabilityStatement-ph-core-capability-statement.html) for full conformance requirements)
 
 ---
 
@@ -1557,7 +1557,7 @@ curl -X GET \
   -H "Accept: application/fhir+json"
 ```
 
-This shows what the server supports (which resources, operations, etc.).
+This shows what the server supports (which resources, operations, etc.). Compare the server response against the [PH Core CapabilityStatement](CapabilityStatement-ph-core-capability-statement.html) to verify conformance.
 
 ### 2. Create a Patient
 
