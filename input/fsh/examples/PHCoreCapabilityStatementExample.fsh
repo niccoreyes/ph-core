@@ -58,20 +58,15 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "identifier"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Patient-identifier"
 * rest[server].resource[=].searchParam[=].documentation = "Search by PhilHealth ID or PhilSys ID."
 * rest[server].resource[=].searchParam[+].name = "name"
 * rest[server].resource[=].searchParam[=].type = #string
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Patient-name"
 * rest[server].resource[=].searchParam[+].name = "birthdate"
 * rest[server].resource[=].searchParam[=].type = #date
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/individual-birthdate"
 * rest[server].resource[=].searchParam[+].name = "gender"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Patient-gender"
 
 // =================================================================================
 // Resource: Practitioner
@@ -95,14 +90,11 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "identifier"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Practitioner-identifier"
 * rest[server].resource[=].searchParam[=].documentation = "Search by PRC license number."
 * rest[server].resource[=].searchParam[+].name = "name"
 * rest[server].resource[=].searchParam[=].type = #string
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Practitioner-name"
 
 // =================================================================================
 // Resource: Organization
@@ -126,14 +118,11 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "identifier"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Organization-identifier"
 * rest[server].resource[=].searchParam[=].documentation = "Search by NHFR facility code, HCPN code, PEN, or PAN."
 * rest[server].resource[=].searchParam[+].name = "name"
 * rest[server].resource[=].searchParam[=].type = #string
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Organization-name"
 
 // =================================================================================
 // Resource: PractitionerRole
@@ -157,16 +146,12 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "identifier"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"
 * rest[server].resource[=].searchParam[+].name = "practitioner"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner"
 * rest[server].resource[=].searchParam[+].name = "organization"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-organization"
 
 // =================================================================================
 // Resource: Location
@@ -190,13 +175,10 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "name"
 * rest[server].resource[=].searchParam[=].type = #string
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-name"
 * rest[server].resource[=].searchParam[+].name = "organization"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-organization"
 
 // =================================================================================
 // Resource: RelatedPerson
@@ -220,10 +202,8 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "patient"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/RelatedPerson-patient"
 
 // =================================================================================
 // Resource: Encounter
@@ -247,19 +227,14 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "subject"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Encounter-subject"
 * rest[server].resource[=].searchParam[+].name = "date"
 * rest[server].resource[=].searchParam[=].type = #date
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Encounter-date"
 * rest[server].resource[=].searchParam[+].name = "status"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Encounter-status"
 * rest[server].resource[=].searchParam[+].name = "location"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Encounter-location"
 
 // =================================================================================
 // Resource: Condition
@@ -283,19 +258,14 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "subject"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Condition-subject"
 * rest[server].resource[=].searchParam[+].name = "encounter"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Condition-encounter"
 * rest[server].resource[=].searchParam[+].name = "clinical-status"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Condition-clinical-status"
 * rest[server].resource[=].searchParam[+].name = "code"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Condition-code"
 
 // =================================================================================
 // Resource: Observation
@@ -319,23 +289,17 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "subject"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Observation-subject"
 * rest[server].resource[=].searchParam[+].name = "encounter"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Observation-encounter"
 * rest[server].resource[=].searchParam[+].name = "code"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Observation-code"
 * rest[server].resource[=].searchParam[=].documentation = "Search by LOINC code for specific observation types (e.g., 85354-9 for BP, 8480-6 for BP systolic)."
 * rest[server].resource[=].searchParam[+].name = "date"
 * rest[server].resource[=].searchParam[=].type = #date
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Observation-date"
 * rest[server].resource[=].searchParam[+].name = "category"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Observation-category"
 
 // =================================================================================
 // Resource: Procedure
@@ -359,19 +323,14 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "subject"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Procedure-subject"
 * rest[server].resource[=].searchParam[+].name = "encounter"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Procedure-encounter"
 * rest[server].resource[=].searchParam[+].name = "date"
 * rest[server].resource[=].searchParam[=].type = #date
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Procedure-date"
 * rest[server].resource[=].searchParam[+].name = "code"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Procedure-code"
 
 // =================================================================================
 // Resource: Immunization
@@ -395,16 +354,12 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "patient"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Immunization-patient"
 * rest[server].resource[=].searchParam[+].name = "vaccine-code"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Immunization-vaccine-code"
 * rest[server].resource[=].searchParam[+].name = "date"
 * rest[server].resource[=].searchParam[=].type = #date
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Immunization-date"
 
 // =================================================================================
 // Resource: AllergyIntolerance
@@ -428,13 +383,10 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "patient"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-patient"
 * rest[server].resource[=].searchParam[+].name = "clinical-status"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status"
 
 // =================================================================================
 // Resource: HealthcareService
@@ -458,16 +410,12 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "location"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-location"
 * rest[server].resource[=].searchParam[+].name = "organization"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-organization"
 * rest[server].resource[=].searchParam[+].name = "name"
 * rest[server].resource[=].searchParam[=].type = #string
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-name"
 
 // =================================================================================
 // Resource: ServiceRequest
@@ -491,13 +439,10 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "subject"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/ServiceRequest-subject"
 * rest[server].resource[=].searchParam[+].name = "status"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/ServiceRequest-status"
 
 // =================================================================================
 // Resource: Provenance
@@ -518,13 +463,10 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #create
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "target"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Provenance-target"
 * rest[server].resource[=].searchParam[+].name = "agent"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Provenance-agent"
 
 // =================================================================================
 // Resource: Task
@@ -548,16 +490,12 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "patient"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Task-patient"
 * rest[server].resource[=].searchParam[+].name = "status"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Task-status"
 * rest[server].resource[=].searchParam[+].name = "owner"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Task-owner"
 
 // =================================================================================
 // Resource: Composition
@@ -581,19 +519,14 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "subject"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Composition-subject"
 * rest[server].resource[=].searchParam[+].name = "encounter"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Composition-encounter"
 * rest[server].resource[=].searchParam[+].name = "date"
 * rest[server].resource[=].searchParam[=].type = #date
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Composition-date"
 * rest[server].resource[=].searchParam[+].name = "type"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Composition-type"
 
 // =================================================================================
 // Experimental: Medication series
@@ -622,10 +555,8 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "code"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Medication-code"
 
 // =================================================================================
 // Resource: MedicationRequest (experimental)
@@ -649,16 +580,12 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "subject"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationRequest-subject"
 * rest[server].resource[=].searchParam[+].name = "encounter"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationRequest-encounter"
 * rest[server].resource[=].searchParam[+].name = "medication"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationRequest-medication"
 
 // =================================================================================
 // Resource: MedicationStatement (experimental)
@@ -682,13 +609,10 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "subject"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationStatement-subject"
 * rest[server].resource[=].searchParam[+].name = "context"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationStatement-context"
 
 // =================================================================================
 // Resource: MedicationDispense (experimental)
@@ -712,13 +636,10 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "subject"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationDispense-subject"
 * rest[server].resource[=].searchParam[+].name = "context"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationDispense-context"
 
 // =================================================================================
 // Resource: MedicationAdministration (experimental)
@@ -742,13 +663,10 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #update
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "subject"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationAdministration-subject"
 * rest[server].resource[=].searchParam[+].name = "context"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationAdministration-context"
 
 // =================================================================================
 // Resource: Claim (experimental)
@@ -769,7 +687,5 @@ Description: "CapabilityStatement for the PH Core Implementation Guide. Defines 
 * rest[server].resource[=].interaction[=].code = #create
 * rest[server].resource[=].searchParam[+].name = "_id"
 * rest[server].resource[=].searchParam[=].type = #token
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[server].resource[=].searchParam[+].name = "patient"
 * rest[server].resource[=].searchParam[=].type = #reference
-* rest[server].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Claim-patient"
